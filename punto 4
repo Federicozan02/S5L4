@@ -1,0 +1,22 @@
+class contoBancario:
+    def __init__(self, saldo):
+        self.saldo = saldo
+    
+    def modificaSaldo(self):
+        scelta = input("Inserire (+) se si vuole depositare, (-) se si vuole prelevare: ")
+        try:
+            if scelta != "+" and scelta != "-":
+                print("Mi dispiace, ma hai inserito il valore sbagliato. Attualmente il tuo saldo è: ")
+                return self.saldo
+            elif scelta == "+":
+                deposito = int(input("Quanto si vuole depositare?"))
+                return self.saldo + deposito
+            else:
+                prelievo = int(input("Quanto si vuole prelevare?"))
+                return self.saldo - prelievo
+        except: 
+        	print("Il tipo di dato inserito non è coerente")
+        	return 0
+
+mioconto = contoBancario(1029)
+print(mioconto.modificaSaldo(), "$")
