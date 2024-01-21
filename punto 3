@@ -1,0 +1,15 @@
+class cerchio:
+	def __init__(self, raggio):
+		self.raggio = raggio
+		
+	def area(self):
+		pi_greco = 3.14
+		return self.raggio**2 * pi_greco
+	
+	def circonferenza(self):
+		pi_greco = 3.14
+		return self.raggio * 2 * pi_greco
+
+persCerc = cerchio(4)
+print(persCerc.area())
+print(persCerc.circonferenza())
