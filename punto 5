@@ -1,0 +1,22 @@
+class prodotto:
+ 	def __init__(self, nome, prezzo,quantitadisponibile):
+ 		self.nomeprodotto = nome
+ 		self.prezzo = prezzo
+ 		self.quantita = quantitadisponibile
+ 
+ 		
+ 	def costoTOT (self):
+ 		num = int(input("Inserire il numero di prodotti da acquistare: "))
+ 		if num > self.quantita:
+ 			print("Il quantitativo di prodotto richiesto è troppo alto")
+ 			return 0
+ 		else:
+ 			return num * self.prezzo
+ 	
+ 	def verificaQta (self):
+ 		print("Il prodotto ", self.nomeprodotto, " è disponibile. Ci sono: ", self.quantita, "prodotti")
+
+
+mioprodotto = prodotto("Risma di carta", 5.30, 12)
+print(mioprodotto.costoTOT(), "$ è il costo totale dei prodotti")
+mioprodotto.verificaQta()
