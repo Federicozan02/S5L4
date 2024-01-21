@@ -1,0 +1,17 @@
+class aereo:
+	def __init__(self, tipo, consumoMedioPax, passeggeri):
+		self.tipo = tipo
+		self.consumo = consumoMedioPax
+		self.passeggeri = passeggeri
+	
+	def consFinale(self):
+		try:
+		    ore = int(input("Quante ore ha volato l'aereo?"))
+		    return ore * self.consumo * self.passeggeri
+		   
+		except:
+			print("Il numero di ore inserite non è valido")
+			return 0
+		
+b737 = aereo("Boeing737", 1000, 120)
+print("L'aereo ", b737.tipo, "ha consumato per questo volo: ", b737.consFinale(), "Kg di  carburante")
