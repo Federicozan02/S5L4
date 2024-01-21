@@ -1,0 +1,16 @@
+class libro:
+	def __init__(self, titolo, autore, anno):
+		self.titolo = titolo
+		self.autore = autore
+		self.anno = anno
+		
+	def recente (self):
+		if self.anno[0] != "2":
+			print("Il libro è molto vecchio")
+		elif self.anno[2] != "2" or self.anno != "1":
+			print("Il libro non è molto vecchio, ma neanche recente")
+		else:
+			print("Il libro è recente")
+
+miolibro = libro("Mario è rosso", "Giuseppe", "2000")
+miolibro.recente()
